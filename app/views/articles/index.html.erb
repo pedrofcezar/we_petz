@@ -1,0 +1,11 @@
+<h1> Todos os artigos da WePetz </h1>
+
+<ul>
+<% @articles.each do |article| %>
+<li> <%= article.photo %></li>
+<li> Nome do Usuário: <%= article.author %></li>
+<li> Email do Usuário: <%= article.email %></li>
+<li> Título do Artigo: <%= article.title %></li>
+<li> Cão: <%= article.dog_key %> Gato: <%= article.cat_key %> Produtos: <%= article.product_key %> Pet: <%= article.pet_key %></li>
+<% end %>
+</ul>
