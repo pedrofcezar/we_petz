@@ -25,6 +25,11 @@
       border-bottom-style: dotted;
       border-bottom-color: orange;
       font-size: 24px;
+      h4{
+        :hover{
+          text-decoration: none;
+        }
+      }
     }
     .card-body {
       border-bottom-style: solid;
@@ -42,4 +47,14 @@
       }
     }
   }
+}
+
+.title {
+  font-size: 32px;
+  font-family: 'Raleway', sans-serif;
+}
+.content {
+  text-align: justify;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 }
