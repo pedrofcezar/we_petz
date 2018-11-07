@@ -1,6 +1,7 @@
 .wrapper {
   padding: 8px;
   margin: 8px;
+  text-decoration: none;
   h1{
     font-size: 40px;
     font-family: 'Spicy Rice', cursive;
@@ -27,6 +28,7 @@
       font-size: 24px;
       h4{
         :hover{
+          color: black;
           text-decoration: none;
         }
       }
@@ -57,4 +59,14 @@
   text-align: justify;
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
+}
+.author {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+}
+.keys{
+  p {
+  font-size: 12px;
+   }
+   font-size: 36px;
 }
