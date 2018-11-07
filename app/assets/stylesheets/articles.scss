@@ -1,3 +1,45 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  padding: 8px;
+  margin: 8px;
+  h1{
+    font-size: 40px;
+    font-family: 'Spicy Rice', cursive;
+    i{
+      color: gray;
+    }
+  }
+.flex {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .card {
+    position: relative;
+    border-style: solid;
+    border-color: pink;
+    max-width:  400px;
+    max-height: 160px;
+    padding: 8px;
+    font-family: 'Raleway', sans-serif;
+    .card-header {
+      border-bottom-style: dotted;
+      border-bottom-color: orange;
+      font-size: 24px;
+    }
+    .card-body {
+      border-bottom-style: solid;
+      border-bottom-color: green;
+      h5{
+        font-size: 16px;
+      }
+      p{
+        font-size: 12px;
+      }
+      }
+      .card-footer {
+        color: gray;
+        font-size: 24px;
+      }
+    }
+  }
+}

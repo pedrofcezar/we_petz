@@ -1,11 +1,38 @@
-<h1> Todos os artigos da WePetz </h1>
-
-<ul>
-<% @articles.each do |article| %>
-<li> <%= article.photo %></li>
-<li> Nome do Usuário: <%= article.author %></li>
-<li> Email do Usuário: <%= article.email %></li>
-<li> Título do Artigo: <%= article.title %></li>
-<li> Cão: <%= article.dog_key %> Gato: <%= article.cat_key %> Produtos: <%= article.product_key %> Pet: <%= article.pet_key %></li>
-<% end %>
-</ul>
+<div class="wrapper">
+    <div class="container">
+        <h1> WePetz Blog <span style="margin: 15px;"><i class="fas fa-paw"></i></span></h1>
+    </div>
+    <div class="container flex">
+        <div class="row">
+            <div class="col-xs-4 off-site-3">
+                <% @articles.each do |article| %>
+                <div class="card">
+                    <%= article.photo %>
+                    <div class="card-header">
+                        <h4>Título: <b><%= article.title %></b></h4>
+                    </div>
+                    <div class="card-body">
+                        <h5>Autor: <b><%= article.author %></b></h5>
+                        <p>Email :
+                            <%= article.email %>
+                        </p>
+                    </div>
+                    <div class="div card-footer">
+                        <% if article.dog_key %><i class="fas fa-dog"></i>
+                        <% else %> <span></span>
+                        <% end %>
+                        <% if article.cat_key %><i class="fas fa-cat"></i>
+                        <% else %> <span></span>
+                        <% end %>
+                        <% if article.product_key %><i class="fas fa-box-open"></i>
+                        <% else %> <span></span>
+                        <% end %>
+                        <% if article.pet_key %><i class="fas fa-paw"></i>
+                        <% else %> <span></span>
+                        <% end %>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
