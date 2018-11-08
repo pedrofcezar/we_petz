@@ -33,7 +33,11 @@
                         <% end %>
                     </div>
                 </div>
+                <div class="container">
+                  <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, article_path(article), method: :delete %>
+                </div>
                 <% end %>
+                </div>
             </div>
         </div>
     </div>
