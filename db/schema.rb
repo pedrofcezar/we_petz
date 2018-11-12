@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_164550) do
+
+ActiveRecord::Schema.define(version: 2018_11_09_164541) do
 
   create_table "articles", force: :cascade do |t|
     t.string "author"
@@ -27,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_164550) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "stars"
+    t.integer "star"
     t.text "review_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
