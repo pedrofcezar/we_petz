@@ -49,7 +49,7 @@ private
   end
 
   def review_params
-    params.require(:review).permit(:name, :email, :review_content, :stars)
+    params.require(:review).permit(:name, :email, :review_content, :star)
   end
 
 end
