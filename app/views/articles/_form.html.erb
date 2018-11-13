@@ -1,6 +1,6 @@
         <%= simple_form_for [@article] do |f| %>
         <%= f.input :author, label: 'Nome do autor', error: 'Nome obrigatório. Por favor, digite um nome'%>
-        <%= f.input :email %>
+        <%= f.input :email, error: "Favor escreva um email válido" %>
         <%= f.input :title, label: 'Título do artigo', error: 'Título do artigo obrigatório. Por favor, digite um título' %>
         <%= f.input :content,  label: 'Conteúdo do artigo', error: 'Conteúdo obrigatório. Por favor, escreva um conteúdo.', placeholder: 'Nesse espaço, escreva seu artigo...' %>
         <h5> Abaixo, selecione sobre que assunto é seu artigo:</h5>

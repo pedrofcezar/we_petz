@@ -9,10 +9,10 @@
             <div class="card">
                 <%= article.photo %>
                 <div class="card-header">
-                    <h4>Título: <b><%= link_to article.title, article_path(article) %></b></h4>
+                    <h4>Título: <b><%= link_to article.title.upcase, article_path(article) %></b></h4>
                 </div>
                 <div class="card-body">
-                    <h5>Autor: <b><%= article.author %></b></h5>
+                    <h5>Autor: <b><%= article.author.capitalize %></b></h5>
                     <p>Email :
                         <%= article.email %>
                     </p>
