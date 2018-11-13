@@ -1,8 +1,8 @@
 <div class="container title">
-    <%= @article.title %>
+    <%= @article.title.upcase %>
 </div>
 <div class="container author">
-    <%= @article.author %>
+    <%= @article.author.capitalize %>
 </div>
 <div style="height: 25px"></div>
 <div class="container keys">
@@ -31,14 +31,15 @@
     <h2> Reviews </h2>
     <%= link_to "Escrever Review", new_article_review_path(@article) %>
     <% @article.reviews.each do |review| %>
-    <div>
-        <%= review.name %>
+    <div> <p>Review feita por <b> <%= review.name.capitalize %> </b></p>
     </div>
     <div>
+      <span>Como <b> <%= review.name.capitalize %> </b> avalia o artigo <b> <%= @article.title.upcase %> </b>de <b> <%= @article.author.capitalize %>: </b> </span>
         <%= review.star %>
     </div>
     <div>
-        <%= review.review_content %>
+
+       <p><%= review.review_content %></p>
     </div>
     <div>
         <%= link_to "Editar Review", edit_article_review_path(review.article,review) %>
