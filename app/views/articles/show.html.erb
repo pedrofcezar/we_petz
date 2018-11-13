@@ -1,51 +1,55 @@
-<div class="wrapper">
-    <h1> WePetz Blog <span style="margin: 15px;"><i class="fas fa-paw"></i></span></h1>
-    <div class="container title">
-        <%= @article.title %>
-    </div>
-    <div class="container author">
-        <%= @article.author %>
-    </div>
-    <div style="height: 25px"></div>
-    <div class="container keys">
-        <p> Este artigo refere-se a...</p>
-        <span>
+<div class="container title">
+    <%= @article.title %>
+</div>
+<div class="container author">
+    <%= @article.author %>
+</div>
+<div style="height: 25px"></div>
+<div class="container keys">
+    <p> Este artigo refere-se a...</p>
+    <span>
             <% if @article.dog_key %>
             <i class="fas fa-dog"></i>
             <% else %> <span></span>
-        <% end %>
-        <% if @article.cat_key %><i class="fas fa-cat"></i>
-        <% else %> <span></span>
-        <% end %>
-        <% if @article.product_key %><i class="fas fa-box-open"></i>
-        <% else %> <span></span>
-        <% end %>
-        <% if @article.pet_key %><i class="fas fa-paw"></i>
-        <% else %> <span></span>
-        <% end %>
-        </span>
-    </div>
-    <div style="height: 25px"></div>
-    <div class="cont/ainer content">
-        <%= @article.content %>
-    </div>
-    <div class="review">
-        <h2> Reviews </h2>
-        <% @article.reviews.each do |review| %>
-        <div>
-            <%= review.name %>
-        </div>
-        <div>
-            <%= review.star %>
-        </div>
-        <div>
-            <%= review.review_content %>
-        </div>
-        <% end %>
-    </div>
-    <%= link_to "Apagar", article_path(@article), method: :delete %>
-    <div style="height: 25px"></div>
-    <%= link_to "Editar", edit_article_path(@article)  %>
-    <div style="height: 25px"></div>
-    <%= link_to "Voltar", articles_path  %>
+    <% end %>
+    <% if @article.cat_key %><i class="fas fa-cat"></i>
+    <% else %> <span></span>
+    <% end %>
+    <% if @article.product_key %><i class="fas fa-box-open"></i>
+    <% else %> <span></span>
+    <% end %>
+    <% if @article.pet_key %><i class="fas fa-paw"></i>
+    <% else %> <span></span>
+    <% end %>
+    </span>
 </div>
+<div style="height: 25px"></div>
+<div class="cont/ainer content">
+    <%= @article.content %>
+</div>
+<div class="review">
+    <h2> Reviews </h2>
+    <%= link_to "Escrever Review", new_article_review_path(@article) %>
+    <% @article.reviews.each do |review| %>
+    <div>
+        <%= review.name %>
+    </div>
+    <div>
+        <%= review.star %>
+    </div>
+    <div>
+        <%= review.review_content %>
+    </div>
+    <div>
+        <%= link_to "Editar Review", edit_article_review_path(review.article,review) %>
+    </div>
+    <div>
+        <%= link_to "Apagar Review", article_review_path(review.article, review), method: :delete %>
+    </div>
+    <% end %>
+</div>
+<%= link_to "Apagar", article_path(@article), method: :delete %>
+<div style="height: 25px"></div>
+<%= link_to "Editar", edit_article_path(@article)  %>
+<div style="height: 25px"></div>
+<%= link_to "Voltar", articles_path  %>

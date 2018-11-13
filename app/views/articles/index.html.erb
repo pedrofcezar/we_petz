@@ -1,48 +1,40 @@
-<div class="wrapper">
-    <div class="container">
-        <h1> WePetz Blog <span style="margin: 15px;"><i class="fas fa-paw"></i></span></h1>
-        <p> <%= link_to "Escrever Artigo", new_article_path %></p>
-    </div>
-    <div class="container flex">
-            <div class="col-xs-12">
-               <div class="row">
-                <% @articles.each do |article| %>
-                <div class="card">
-                    <%= article.photo %>
-                    <div class="card-header">
-                        <h4>Título: <b><%= link_to article.title, article_path(article) %></b></h4>
-                    </div>
-                    <div class="card-body">
-                        <h5>Autor: <b><%= article.author %></b></h5>
-                        <p>Email :
-                            <%= article.email %>
-                        </p>
-                    </div>
-                    <div class="div card-footer">
-                        <% if article.dog_key %><i class="fas fa-dog"></i>
-                        <% else %> <span></span>
-                        <% end %>
-                        <% if article.cat_key %><i class="fas fa-cat"></i>
-                        <% else %> <span></span>
-                        <% end %>
-                        <% if article.product_key %><i class="fas fa-box-open"></i>
-                        <% else %> <span></span>
-                        <% end %>
-                        <% if article.pet_key %><i class="fas fa-paw"></i>
-                        <% else %> <span></span>
-                        <% end %>
-                    </div>
+<p>
+    <%= link_to "Escrever Artigo", new_article_path %>
+</p>
+</div>
+<div class="container flex">
+    <div class="col-xs-12">
+        <div class="row">
+            <% @articles.each do |article| %>
+            <div class="card">
+                <%= article.photo %>
+                <div class="card-header">
+                    <h4>Título: <b><%= link_to article.title, article_path(article) %></b></h4>
                 </div>
-                <div class="container">
-                  <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, article_path(article), method: :delete %>
-
-
-
-
-
+                <div class="card-body">
+                    <h5>Autor: <b><%= article.author %></b></h5>
+                    <p>Email :
+                        <%= article.email %>
+                    </p>
                 </div>
-                <% end %>
+                <div class="div card-footer">
+                    <% if article.dog_key %><i class="fas fa-dog"></i>
+                    <% else %> <span></span>
+                    <% end %>
+                    <% if article.cat_key %><i class="fas fa-cat"></i>
+                    <% else %> <span></span>
+                    <% end %>
+                    <% if article.product_key %><i class="fas fa-box-open"></i>
+                    <% else %> <span></span>
+                    <% end %>
+                    <% if article.pet_key %><i class="fas fa-paw"></i>
+                    <% else %> <span></span>
+                    <% end %>
                 </div>
             </div>
+            <div class="container">
+                <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, article_path(article), method: :delete %>
+            </div>
+            <% end %>
         </div>
     </div>

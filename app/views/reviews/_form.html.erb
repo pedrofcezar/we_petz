@@ -1,0 +1,7 @@
+<%= simple_form_for [@article, @review] do |f| %>
+<%= f.input :name, label: 'Nome', error: 'Nome obrigatório. Por favor, digite um nome'%>
+<%= f.input :email %>
+<%= f.input :star, label: 'Classifique o Artigo', default: 0 %>
+<%= f.input :review_content,  label: 'Escreva sobre a review', error: 'Conteúdo obrigatório. Por favor, escreva um conteúdo.', placeholder: 'Por favor, deixe seu relato sobre o artigo' %>
+<%= f.submit "Submeter Review", class: "btn btn-primary" %>
+<% end %>

@@ -1,5 +1,3 @@
-  <div class="wrapper">
-   <div class="container form">
         <%= simple_form_for [@article] do |f| %>
         <%= f.input :author, label: 'Nome do autor', error: 'Nome obrigatório. Por favor, digite um nome'%>
         <%= f.input :email %>
@@ -13,5 +11,3 @@
         <%= f.input :photo, label: "Foto do artigo" %>
         <%= f.submit "Cadastrar artigo", class: "btn btn-primary" %>
         <% end %>
-  </div>
-</div>
