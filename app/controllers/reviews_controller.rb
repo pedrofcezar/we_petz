@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only; [:edit, :update, :destroy]
-  before_action :set_article_to_review, only: [:index, :create]
+  before_action :set_review, only: [:edit, :update, :destroy]
+  before_action :set_article_to_review, only: [:edit, :index, :create]
 
   def index
     @reviews = @article.reviews
@@ -13,11 +13,13 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review = @article.review
-    if article.save
+    @review.article = @article
+    # @review = @article.reviews
+    if @review.save
       redirect_to article_path(@article)
     else
       render 'new'
+    end
   end
 
   def edit
@@ -26,7 +28,8 @@ class ReviewsController < ApplicationController
 
   def update
     @review.update(review_params)
-    if review.save
+    set_article_to_review
+    if @review.save
       redirect_to article_path(@article)
     else
      render 'edit'
@@ -34,7 +37,9 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    set_article_to_review
     @review.destroy
+    redirect_to article_path(@article)
   end
 
 
