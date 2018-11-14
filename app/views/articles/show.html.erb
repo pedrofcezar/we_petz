@@ -24,12 +24,12 @@
     </span>
 </div>
 <div style="height: 25px"></div>
-<div class="cont/ainer content">
+<div class="container content">
     <%= @article.content %>
 </div>
 <div class="review">
     <h2> Reviews </h2>
-    <%= link_to "Escrever Review", new_article_review_path(@article) %>
+    <%= button_to "Escrever Review", new_article_review_path(@article), method: :get %>
     <% @article.reviews.each do |review| %>
     <div> <p>Review feita por <b> <%= review.name.capitalize %> </b></p>
     </div>
@@ -49,8 +49,8 @@
     </div>
     <% end %>
 </div>
-<%= link_to "Apagar", article_path(@article), method: :delete %>
+<%= button_to "Apagar Artigo", article_path(@article), method: :delete %>
 <div style="height: 25px"></div>
-<%= link_to "Editar", edit_article_path(@article)  %>
+<%= button_to "Editar Artigo", edit_article_path(@article), method: :get  %>
 <div style="height: 25px"></div>
-<%= link_to "Voltar", articles_path  %>
+
