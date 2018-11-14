@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#
 Article.last.destroy!
 
 article1 = Article.create!(author: 'Pepe', title: 'Pets safaadinhos', content: "Pets safadinhosPets safadinhosPets safadinhos", dog_key:true, cat_key:true, product_key:true, pet_key:false )
