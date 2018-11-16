@@ -4,13 +4,13 @@
 
 .footer {
   box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  position: absolute;
+  position: -1px absolute;
   width: 100%;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 20px !important;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   bottom: 0;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: purple;
+  color: $specialfontscolor;
   opacity: 0.75;
   text-decoration: none;
   font-size: 24px;
@@ -32,12 +32,12 @@
   opacity: 1;
 }
 .footer .fa-heart {
-  color: #FD8CD4;
+  color: $specialfontscolor;
 }
 
 .footer-copyright p {
   margin: 0;
-  color: purple;
+  color: $specialfontscolor;
   font-size: 62%;
     opacity: 0.75;
 }
