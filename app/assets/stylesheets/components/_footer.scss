@@ -1,11 +1,20 @@
-.wrapper-footer {
-  background: yellow;
+/* _body.scss contains attributes (padding/margin) related to footer*/
+
+
+
+.footer {
+  box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  background: white;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 75px;
+  justify-content: space-between;
+  height: 60px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  bottom: 0;
+  border-bottom: -1;
 
 }
 .footer-links {
@@ -13,15 +22,44 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.50;
+  color: purple;
+  opacity: 0.75;
   text-decoration: none;
-  font-size: 30px;
-  padding: 0px 30px;
+  font-size: 24px;
+  padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 3;
+  opacity: 1;
 }
 .footer .fa-heart {
-  color: #D23333;
+  color: #FD8CD4;
+}
+
+.footer-copyright p {
+  margin: 0;
+  color: purple;
+  font-size: 62%;
+    opacity: 0.75;
+}
+
+.footer-copyright {
+  display: block;
+}
+
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }

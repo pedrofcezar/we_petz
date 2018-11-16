@@ -1,5 +1,5 @@
 <div class="container title">
-    <%= @article.title.upcase %>
+    <%= @article.title.titleize %>
 </div>
 <div class="container author">
     <%= @article.author.capitalize %>
@@ -29,7 +29,7 @@
 </div>
 <div class="review">
     <h2> Reviews </h2>
-    <%= button_to "Escrever Review", new_article_review_path(@article), method: :get %>
+    <%= button_to "Escrever Review", new_article_review_path(@article), method: :get, class:"btn btn-primary"%>
     <% @article.reviews.each do |review| %>
     <div> <p>Review feita por <b> <%= review.name.capitalize %> </b></p>
     </div>
