@@ -8,6 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // linhas do link na navbar não funcionam, o style está diretamente dentro do erb.
+//   #linkgeral{
+//     .i{
+//     font-size: 50px;
+//     color: rgba(255,255,102, 0.8) !important;
+//   }
+// }
    h1{
     font-size: 50px;
     font-family: 'Spicy Rice', cursive;
@@ -38,6 +45,7 @@
 .navbar-item {
   cursor: pointer;
   padding: 0 20px;
+  color: $specialfontscolor;
 }
 
 /* Navbar link */

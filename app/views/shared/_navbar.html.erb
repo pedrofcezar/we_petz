@@ -1,19 +1,21 @@
 <div class="navbar">
     <!-- Logo -->
-    <%= link_to '<i class="fas fa-paw", style="font-size: 50px; color: orange;"> </i>'.html_safe, articles_path %> <h1> Wepetz Blog </h1>
+    <div id="linkgeral">
+    <%= link_to '<i class="fas fa-paw", style="font-size: 50px"> </i>'.html_safe, articles_path %> </div>
+    <h1> Wepetz Blog </h1>
 
 
     <!-- Right Navigation -->
     <div class="navbar-right hidden-xs hidden-sm">
-        <a href="" class="navbar-item navbar-link">Veterinarios</a>
+        <a href="" class="navbar-item navbar-link">Veterinários</a>
         <a href="" class="navbar-item navbar-link">Dicas</a>
         <a href="" class="navbar-item navbar-link">Artigos</a>
         <a href="" class="navbar-item navbar-link">Animais</a>
         <a href="" class="navbar-item navbar-link">Produtos</a>
         <div class="empty-form">
             <form action="#">
-                <input type="text" placeholder="O que quer saber sobre pets..." style="max-width: 300px; max-height: 30px;">
-                <input type="submit" value="Procurar">
+                <input type="text" placeholder="Tudo sobre pets" style="max-width: 300px; max-height: 30px;">
+                <input type="submit", class= "btn-xs", style="background-color: rgba(255,255,102, 0.8); margin: rgba(255,255,102, 0.8)" value="Procurar">
             </form>
         </div>
         <!-- Profile picture with dropdown list -->

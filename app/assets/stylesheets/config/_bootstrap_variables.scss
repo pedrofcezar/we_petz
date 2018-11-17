@@ -1,0 +1,62 @@
+
+
+// This is where you override default Bootstrap variables
+// 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+// 3. You can override them below!
+
+// // General style
+// $font-family-sans-serif:  $body-font;
+// $headings-font-family:    $headers-font;
+// $body-bg:                 $webelonggray;
+// $font-size-base: 18px;
+
+// Colors (in background config use the bootstrap variable)
+$specialfontscolor: rgba(255,255,102, 0.8);
+$navbarfooterscheme: rgba(139,0,139, 0.5);
+$bodycolor: rgba(255, 204, 204, 0.1);
+
+
+// Buttons & inputs' radius
+$border-radius-base:  5px;
+$border-radius-large: 5px;
+$border-radius-small: 5px;
+
+$brand-primary: $navbarfooterscheme;
+$brand-warning: $specialfontscolor;
+
+$link-color:            $brand-warning !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
+
+
+// Patch to make simple_form compatible with bootstrap 3
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: $navbarfooterscheme;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.custom-select.is-invalid {
+  border-color: $specialfontscolor;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-tooltip,
+.form-control.is-invalid ~ .invalid-feedback,
+.form-control.is-invalid ~ .invalid-tooltip,
+.was-validated .custom-select:invalid ~ .invalid-feedback,
+.was-validated .custom-select:invalid ~ .invalid-tooltip,
+.custom-select.is-invalid ~ .invalid-feedback,
+.custom-select.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+// Override other variables below!
