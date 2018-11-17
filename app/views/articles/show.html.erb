@@ -29,14 +29,17 @@
 </div>
 <div class="review">
     <h2> Reviews </h2>
-    <%= button_to "Escrever Review", new_article_review_path(@article), method: :get, class:"btn btn-primary"%>
+    <%= button_to "Escrever Review", new_article_review_path(@article), method: :get, class:"btn btn-primary btn-lg"%>
     <% @article.reviews.each do |review| %>
     <div>
         <p>Review feita por <b> <%= review.name.capitalize %> </b></p>
     </div>
     <div>
-        <span>Como <b> <%= review.name.capitalize %> </b> avalia o artigo <b> <%= @article.title.upcase %> </b>de <b> <%= @article.author.capitalize %>: </b> </span>
-        <%= review.star %>
+        <span>Como <b> <%= review.name.capitalize %> </b> avalia o artigo <b> <%= @article.title.upcase %> </b>de <b> <%= @article.author.capitalize %>: </b>
+    <div id="starsfa"></span>
+        <span>   <% review.star.times do %>
+            <i class='fas fa-star'></i>
+            <% end %></span></div>
     </div>
     <div>
         <p>
@@ -44,14 +47,12 @@
         </p>
     </div>
     <div>
-        <%= link_to "Editar Review", edit_article_review_path(review.article,review) %>
-    </div>
-    <div>
-        <%= link_to "Apagar Review", article_review_path(review.article, review), method: :delete %>
+        <%= button_to "Apagar Review", article_review_path(review.article, review), method: :delete, class: "btn btn-primary btn-sm" %>
     </div>
     <% end %>
 </div>
-<%= button_to "Apagar Artigo", article_path(@article), method: :delete %>
+<p>
+<%= button_to "Apagar Artigo", article_path(@article), method: :delete, class: "btn btn-primary btn-lg" %> </p>
 <div style="height: 25px"></div>
-<%= button_to "Editar Artigo", edit_article_path(@article), method: :get  %>
-<div style="height: 25px"></div>
+<%= button_to "Editar Artigo", edit_article_path(@article), method: :get, class: "btn btn-primary btn-lg"  %>
+

@@ -14,7 +14,8 @@ body {
   font-family: "Fira Sans", "Helvetica", "sans-serif";
   margin: 0;
   background: #F7F7F7;
-
+    .wrapper{
+      .container{
   h1, h2, h3, h4, h5, h6, p {
     font-family: "Overlock", "Helvetica", "sans-serif";
     color: #7f7f7f
@@ -23,5 +24,6 @@ body {
   p {
     font-size: 14px;
   }
-
+}
+}
 }
