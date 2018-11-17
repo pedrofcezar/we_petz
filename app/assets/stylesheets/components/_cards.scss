@@ -10,9 +10,11 @@
       border-bottom-style: dotted;
       border-bottom-color: orange;
       font-size: 24px;
-      h4{
+      h4.link{
+        color: $navbarfooterscheme !important;
+        text-decoration: none;
         :hover{
-          color: black;
+          color: $otherfontscolor !important;;
           text-decoration: none;
         }
       }
@@ -28,7 +30,7 @@
       }
       }
       .card-footer {
-        color: gray;
+        color: $navbarfooterscheme;
         font-size: 24px;
       }
     }
