@@ -35,24 +35,23 @@
         <p>Review feita por <b> <%= review.name.capitalize %> </b></p>
     </div>
     <div>
-        <span>Como <b><%= review.name.capitalize %></b> avalia o artigo <b><%= @article.title.upcase %></b>de <b><%= @article.author.capitalize %>: </b>
-    <div id="starsfa"></span>
+        <span>Como <b><%= review.name.capitalize %></b> avalia o artigo <b><%= @article.title.upcase %></b> de <b><%= @article.author.capitalize %>: </b> </span></div>
+    <div class="starsfa"></span>
         <span><% review.star.times do %>
             <i class='fas fa-star'></i>
             <% end %></span></div>
-    </div>
-    <div>
-        <p>
-            <%= review.review_content %>
-        </p>
-    </div>
-    <div>
-        <%= button_to "Apagar Review", article_review_path(review.article, review), method: :delete, class: "btn btn-primary btn-sm" %>
-    </div>
-    <% end %>
+<div>
+    <p>
+        <%= review.review_content %>
+    </p>
+</div>
+<div>
+    <%= button_to "Apagar Review", article_review_path(review.article, review), method: :delete, class: "btn btn-primary btn-sm" %>
+</div>
+<% end %>
 </div>
 <p>
-<%= button_to "Apagar Artigo", article_path(@article), method: :delete, class: "btn btn-primary btn-lg" %> </p>
+    <%= button_to "Apagar Artigo", article_path(@article), method: :delete, class: "btn btn-primary btn-lg" %>
+</p>
 <div style="height: 25px"></div>
 <%= button_to "Editar Artigo", edit_article_path(@article), method: :get, class: "btn btn-primary btn-lg"  %>
-

@@ -47,13 +47,12 @@
 
 
 // show
-.review{
-  #starfa {
-    i .fa-star{
-      color: yellow;
+
+
+  .starsfa {
+         color: $starscolor !important;
     }
-  }
-}
+
 
 .trashfa {
   color: pink;
